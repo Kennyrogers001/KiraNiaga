@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="KiraNiaga.css">
 </head>
 <body>
-    <header>
+    <header><div class="logo">
     <h1>KiraNiaga</h1>
-    <h5>Calculator for SMEs</h5>
-    </header>
+    <h5>Essential Business Calculators</h5>
+    </header></div>
     <div id="content">
     <section id="left-side">
         <ul id="calculator-list">
@@ -25,7 +25,28 @@
     </section>
     <div class="br"></div>
     <section id="right-side">
-        <div id="break-even" class="shell"></div>
+        <div id="break-even" class="shell">
+            <h1>Break-even calculator</h1>
+            <details>
+            <summary><h5>"How many sales do you need before making a profit?"</h5></summary>
+            <div class="card"><p><strong>What this calculator does:</strong></p>
+            <p>This calculator helps you figure out how many <strong>units</strong> you ned to <strong>sell</strong> before you cover all cost</p></div>
+            </details>
+            <div class="input-container">
+            <h3>Inventory Cost</h3>
+            <p class="input-exp">How much did you spend on inventory?</p>
+            <input type="number" placeholder="4000" min="0" id="inventory-cost" class="input-value">
+            <h3>Fixed Cost</h3>
+            <p class="input-exp">Your monthly expenses (rent, salaries, etc.)</p>
+            <input type="number" placeholder="5000" min="0" id="fixed-cost" class="input-value"></p>
+            <h3>Selling price per Unit</h3>
+            <p class="input-exp">How much do you charge per product?</p>
+            <input type="number" placeholder="7" min="0" id="selling-price" class="input-value"></div>
+            <div class="output-container">
+                
+            </div>
+        </div>
+        </div>
         <div id="profit-margin-markup" class="shell"></div>
         <div id="cash-flow" class="shell"></div>
         <div id="loan repayment" class="shell"></div>
