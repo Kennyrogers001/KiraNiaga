@@ -63,7 +63,9 @@ button:hover{
 #cash-flow{
     display: none;
 }
-
+#loan-repayment{
+    display:none;
+}
 .shell{
     padding: 2px 12px 2px 12px;
 }
@@ -73,8 +75,13 @@ button:hover{
     border-radius: 25px;
     margin-top: 10px;
     font-family: 'Courier New', Courier, monospace;
-
+    box-shadow: black 5px 5px 10px;
 }
+.card:hover{
+    background-color: black;
+    color: white;
+}
+
 .input-exp{
     font-size: small;
     margin-top: 0;
@@ -127,7 +134,8 @@ h3{
     }
     .input-container{
         float:left;
-        width:50%
+        width:50%;
+        padding-bottom: 5px;
     }
     .output-container{
         float: right;
