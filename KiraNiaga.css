@@ -13,7 +13,6 @@ h5{
     margin: 0;
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
-    cursor: pointer;
 }
 .br{
     height: 1vh;
@@ -69,6 +68,9 @@ button:hover{
 .shell{
     padding: 2px 12px 2px 12px;
 }
+summary>h5{
+    cursor: pointer;
+}
 .card{
     background-color:white ;
     padding:2px 12px 2px 12px ;
@@ -80,6 +82,7 @@ button:hover{
 .card:hover{
     background-color: black;
     color: white;
+    box-shadow:none;
 }
 
 .input-exp{
@@ -96,6 +99,21 @@ h3{
 #calculator-list{
     list-style: none;
     padding: 0;
+}
+.footer{
+    background-color: #eeeeee;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    margin: 0 5% 0 5%;
+    border-radius: 50px;
+    padding: 10%;
+    margin-bottom: 15%;
+}
+.pc{
+    display: none;
+}
+.input-container{
+    text-align: center;
 }
 /*large screen layout*/
 @media (min-width: 820px) {
@@ -141,5 +159,12 @@ h3{
         float: right;
         height: 90px;
         width: 50%;
+    }
+    footer{
+        display:none
+    }
+    .pc{
+        margin:4vw 4vw 0 4vw;
+        display: block;
     }
 }
