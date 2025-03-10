@@ -58,8 +58,12 @@ button:hover{
     display: none;
 }
 #margin-markup{
+    display: none;
+}
+#cash-flow{
     display: block;
 }
+
 .shell{
     padding: 2px 12px 2px 12px;
 }
@@ -94,7 +98,6 @@ h3{
         width: 29%;
         float: left;
         min-height: 75vh;
-        max-width: max-content;
         
     }
     button{
@@ -118,7 +121,7 @@ h3{
         width: 69%;
         float:right;
         min-height: 75vh;
-        max-height: max-content;
+        overflow: hidden;
         border-radius: 0 50px 50px 0;
     }
     .input-container{

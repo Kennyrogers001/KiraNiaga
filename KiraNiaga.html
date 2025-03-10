@@ -78,13 +78,36 @@
                     <li>For every <strong>$1</strong> spent, you're earning <strong>$<span>0.5</span></strong></li></div>
                 </div>
         </div>
-        <div id="cash-flow" class="shell"></div>
+        <div id="cash-flow" class="shell">
+            <h1>Cash flow calculator</h1>
+            <details>
+                <summary><h5>"Is your business making or losing cash? Find out instantly!"</h5></summary>
+                <div class="card"><p><strong>What this calculator does:</strong></p>
+                    <p>This tool helps you <strong>calculate your net cash flow</strong> - the difference between the money your business <strong>receives</strong> and what it <strong>spends</strong>.</p>
+                </div>    
+            </details>
+            <div class="input-container">
+                <h3>Cash inflows</h3>
+                <p class="input-exp">Total money coming in: sales, investments, etc.</p>
+                <input type="number" placeholder="$4000" min="0" id="cash-inflows" class="input-value">
+                <h3>Cash outflows</h3>
+                <p class="input-exp">Total expenses: rent, salaries, supplies, etc.</p>
+                <input type="number" placeholder="$2000" min="0" id="cash-outflows" class="input-value">
+            </div>
+            <div class="output-container">
+                <div class="result">
+                    <h2 class="result-title">...Result...</h2>
+                    <h3>Your net cash flow is :</h3>
+                    <h3 class="card"><span>+</span>$<span>2000</span></h3>
+                </div>    
+            </div><br>
+        </div>
         <div id="loan repayment" class="shell"></div>
         <div id="inventory-turnover" class="shell"></div>
         <div id="pricing strategy" class="shell"></div>
         <div id="marketing-roi" class="shell"></div>
     </section>
-    </div>
+    </div><br>
     <script src="KiraNiaga.js"></script>
 
 </body>
