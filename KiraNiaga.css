@@ -61,7 +61,7 @@ button:hover{
     display: none;
 }
 #cash-flow{
-    display: block;
+    display: none;
 }
 
 .shell{
@@ -73,6 +73,7 @@ button:hover{
     border-radius: 25px;
     margin-top: 10px;
     font-family: 'Courier New', Courier, monospace;
+
 }
 .input-exp{
     font-size: small;

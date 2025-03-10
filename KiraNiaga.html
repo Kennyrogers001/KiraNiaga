@@ -102,7 +102,40 @@
                 </div>    
             </div><br>
         </div>
-        <div id="loan repayment" class="shell"></div>
+        <div id="loan repayment" class="shell">
+            <h1>Loan repayment calculator</h1>
+            <details>
+                <summary><h5>"Plan your loan payments smartly - know what you owe before you borrow!"</h5></summary>
+                <div class="card"><p><strong>What this calculator does:</strong></p>
+                    <p>This tool calculates your <strong>monthly loan repayment amount</strong></p>
+                </div>
+            </details>
+            <div class="input-container">
+                <h3>Loan amount</h3>
+                <p class="input-exp">Total amount borrowed</p>
+                <input type="number" placeholder="$10000" min="0" id="loan-amount" class="input-value">
+                <h3>Interest rate (%)</h3>
+                <p class="input-exp">Percentage charged per year</p>
+                <input type="number" placeholder="5" min="0" id="interest-rate" class="input-value">
+                </p>
+                <h3>Loan term (years)</h3>
+                <p class="input-exp">How long you'll repay the loan</p>
+                <input type="number" placeholder="5" min="0" id="loan-term" class="input-value">
+
+            </div>
+            <div class="output-container">
+                <div class="result">
+                    <h2 class="result-title">...Result...</h2>
+                
+                <h3>Your monthly payment will be :</h3>
+                <h3 class="card">$<span>200</span></h3>
+                
+                <h3>Your total payment over term will be :</h3>
+                <h3 class="card">$<span>10000</span></h3><br>
+                <li>By the end of the loan, you'll have paid <strong>$<span>12000</span></strong> in <strong>interest!</strong></li>
+                </div><br>
+            </div>
+        </div>
         <div id="inventory-turnover" class="shell"></div>
         <div id="pricing strategy" class="shell"></div>
         <div id="marketing-roi" class="shell"></div>
