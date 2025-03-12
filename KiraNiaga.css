@@ -29,7 +29,7 @@ h5{
 .container{
     padding:0vw 4vw 0vw 4vw;
     margin-bottom: 3px;
-    
+
 }
 button{
     background-color:white;
@@ -46,6 +46,10 @@ button{
 button:hover{
     background-color: black;
     color: white;
+}
+.button-stay{
+    background-color: black;
+    color: white;   
 }
 #right-side{
     background-color: #eeeeee;
