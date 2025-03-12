@@ -53,6 +53,9 @@ button:hover{
     height:max-content;
     border-radius:50px 50px 50px 50px;
 }
+#intro{
+    display: none;
+}
 #break-even{
     display: none;
 }
@@ -64,6 +67,9 @@ button:hover{
 }
 #loan-repayment{
     display:none;
+}
+#pricing-strategy{
+    display: none;
 }
 .shell{
     padding: 2px 12px 2px 12px;
@@ -150,6 +156,13 @@ h3{
         overflow: hidden;
         border-radius: 0 50px 50px 0;
     }
+    #intro{
+        text-align: center;
+        padding: 40% 0 0 0;
+        font-family: 'Courier New', Courier, monospace;
+        display: flex;
+        justify-content: center;
+    }
     .input-container{
         float:left;
         width:50%;
@@ -159,6 +172,7 @@ h3{
         float: right;
         height: 90px;
         width: 50%;
+        max-height: max-content;
     }
     footer{
         display:none
