@@ -13,7 +13,6 @@ const loanRepayment = document.getElementById("loan-repayment");
 const pricingStrategy = document.getElementById("pricing-strategy");
 const intro = document.getElementById("intro");
 
-
 //make content display to block when list is clicked
     //breakEven_li clicked
     breakEven_li.addEventListener("click", () => {
@@ -98,8 +97,24 @@ const intro = document.getElementById("intro");
 
 });
 
+//break-even calculators
+//breakeven constant
+const inventoryCost = document.getElementById("inventory-cost");
+const fixedCost = document.getElementById("fixed-cost");
+const sellPrice = document.getElementById("selling-price");
 
+//breakeven calc
 
+function calcBreakeven() {
+    const inventoryCostVal = parseFloat(document.getElementById("inventory-cost").value) || 0;
+    const fixedCostVal = parseFloat(document.getElementById("fixed-cost").value) || 0;
+    const sellPriceVal = parseFloat(document.getElementById("selling-price").value) || 0;
 
+    let bePoint = (inventoryCostVal + fixedCostVal) / sellPriceVal;
 
-
+    document.getElementById("break-even-unit").innerHTML = bePoint.toFixed(1);
+}
+//event listener
+[inventoryCost, fixedCost, sellPrice].forEach(input =>{
+    input.addEventListener("input",calcBreakeven);
+});

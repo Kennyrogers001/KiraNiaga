@@ -29,6 +29,7 @@ h5{
 .container{
     padding:0vw 4vw 0vw 4vw;
     margin-bottom: 3px;
+    text-align: center;
 
 }
 button{
@@ -44,8 +45,9 @@ button{
     cursor: pointer;
 }
 button:hover{
-    background-color: black;
+    background-color: gray;
     color: white;
+    box-shadow: none;
 }
 .button-stay{
     background-color: black;
@@ -162,10 +164,14 @@ h3{
     }
     #intro{
         text-align: center;
-        padding: 40% 0 0 0;
+        
         font-family: 'Courier New', Courier, monospace;
         display: flex;
         justify-content: center;
+        width: fit-content;
+        margin: auto;
+        margin-top: 36vh;
+        margin-bottom: 36vh;
     }
     .input-container{
         float:left;
