@@ -104,17 +104,38 @@ const fixedCost = document.getElementById("fixed-cost");
 const sellPrice = document.getElementById("selling-price");
 
 //breakeven calc
-
 function calcBreakeven() {
-    const inventoryCostVal = parseFloat(document.getElementById("inventory-cost").value) || 0;
-    const fixedCostVal = parseFloat(document.getElementById("fixed-cost").value) || 0;
-    const sellPriceVal = parseFloat(document.getElementById("selling-price").value) || 0;
+    let inventoryCostVal = parseFloat(document.getElementById("inventory-cost").value) || 0;
+    let fixedCostVal = parseFloat(document.getElementById("fixed-cost").value) || 0;
+    let sellPriceVal = parseFloat(document.getElementById("selling-price").value) || 0;
 
     let bePoint = (inventoryCostVal + fixedCostVal) / sellPriceVal;
 
     document.getElementById("break-even-unit").innerHTML = bePoint.toFixed(1);
-}
+};
 //event listener
 [inventoryCost, fixedCost, sellPrice].forEach(input =>{
     input.addEventListener("input",calcBreakeven);
+});
+
+//profit margin & markup calculator
+//margin markup constant
+const b_costPrice = document.getElementById("cost-price-mm");
+const b_sellPrice = document.getElementById("selling-price-mm");
+//margin markup calc
+function calcMarginmarkup() {
+    let b_costPrice_Val = parseFloat(b_costPrice.value) || 0;
+    let b_sellPrice_Val = parseFloat(b_sellPrice.value) || 0;
+      
+    let profit = b_sellPrice_Val - b_costPrice_Val;
+    let margin = b_sellPrice_Val > 0 ?(profit / b_sellPrice_Val)*100 : 0;
+    let markup = (b_costPrice_Val > 0) ? (profit / b_costPrice_Val)*100 : 0;
+    let epd = (b_costPrice_Val> 0) ? (profit / b_sellPrice_Val): 0;
+       document.getElementById("margin-result").innerHTML = margin.toFixed(2);
+       document.getElementById("markup-result").innerHTML = markup.toFixed(2);
+       document.getElementById("earning-mm").innerHTML = epd.toFixed(2);
+};
+//event listener
+[b_costPrice, b_sellPrice].forEach(input =>{
+    input.addEventListener("input",calcMarginmarkup);
 });
