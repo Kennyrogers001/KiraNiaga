@@ -139,3 +139,49 @@ function calcMarginmarkup() {
 [b_costPrice, b_sellPrice].forEach(input =>{
     input.addEventListener("input",calcMarginmarkup);
 });
+
+//free cash flow calculator
+//cash flow constant
+const c_cashInflows = document.getElementById("cash-inflows");
+const c_cashOutflows = document.getElementById("cash-outflows");
+//cash flow calc
+function calcCashflow() {
+    let c_cashInflows_Val = parseFloat(c_cashInflows.value) || 0;
+    let c_cashOutflows_Val = parseFloat(c_cashOutflows.value) || 0;
+
+    let cf = c_cashInflows_Val - c_cashOutflows_Val;
+    document.getElementById("cash-flow-result").innerHTML = cf.toFixed(2);
+};
+//event listener
+[c_cashInflows, c_cashOutflows].forEach(input =>{
+    input.addEventListener("input",calcCashflow);
+});
+
+//loan repayment calculator
+//loan repayment constant
+const d_loanAmount = document.getElementById("loan-amount");
+const d_interestRate = document.getElementById("interest-rate");
+const d_loanTerm = document.getElementById("loan-term");
+//loan repayment calc 
+function calcLoanrepayment() {
+    let d_loanAmount_Val = parseFloat(d_loanAmount.value) || 0;
+    let d_interestRate_Val = parseFloat(d_interestRate.value) || 0;
+    let d_loanTerm_Val = parseFloat(d_loanTerm.value) || 0;
+
+    let i = d_interestRate_Val / 100;
+    let monthlyInterestRate = i / 12;
+    let numberOfPayments = d_loanTerm_Val * 12;
+    let monthlyPayment = (d_loanAmount_Val * monthlyInterestRate) / (1 - Math.pow(1 + monthlyInterestRate, -numberOfPayments));
+    let totalPayment = monthlyPayment * numberOfPayments;
+    let totalInterest = totalPayment - d_loanAmount_Val;
+
+    document.getElementById("monthly-payment").innerHTML = monthlyPayment.toFixed(2);
+    document.getElementById("total-payment").innerHTML = totalPayment.toFixed(2);
+    document.getElementById("total-interest").innerHTML = totalInterest.toFixed(2);
+};
+//event listener
+[d_loanAmount, d_interestRate, d_loanTerm].forEach(input =>{
+    input.addEventListener("input",calcLoanrepayment);
+});
+
+
