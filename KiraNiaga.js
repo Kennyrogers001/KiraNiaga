@@ -150,7 +150,9 @@ function calcCashflow() {
     let c_cashOutflows_Val = parseFloat(c_cashOutflows.value) || 0;
 
     let cf = c_cashInflows_Val - c_cashOutflows_Val;
-    document.getElementById("cash-flow-result").innerHTML = cf.toFixed(2);
+    let percent_cf = (cf / c_cashInflows_Val) * 100;
+    document.getElementById("cash-flow-result").innerHTML = cf.toFixed(2) + " @ " + percent_cf.toFixed(2) + "%";
+    
 };
 //event listener
 [c_cashInflows, c_cashOutflows].forEach(input =>{
@@ -183,5 +185,27 @@ function calcLoanrepayment() {
 [d_loanAmount, d_interestRate, d_loanTerm].forEach(input =>{
     input.addEventListener("input",calcLoanrepayment);
 });
+
+//pricing strategy calculator
+//pricing strategy constant
+const e_costPrice = document.getElementById("cost-price");
+const e_desireProfit = document.getElementById("desired-profit");
+
+//pricing strategy calc
+function calcPricingstrategy() {
+    let e_costPrice_Val = parseFloat(e_costPrice.value) || 0;
+    let e_desireProfit_Val = parseFloat(e_desireProfit.value) || 0;
+
+    let sellingPrice = e_costPrice_Val + (e_costPrice_Val * (e_desireProfit_Val / 100));
+    let profit = sellingPrice - e_costPrice_Val;
+
+    document.getElementById("selling-price-result").innerHTML = sellingPrice.toFixed(2);
+    document.getElementById("profit-result").innerHTML = profit.toFixed(2);
+};
+//event listener
+[e_costPrice, e_desireProfit].forEach(input =>{
+    input.addEventListener("input",calcPricingstrategy);
+});
+
 
 
